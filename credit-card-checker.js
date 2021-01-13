@@ -43,7 +43,8 @@ const validateCred = arr => {
     }
     sumDigits += currVal;
   }
-  return (sumDigits % 10) === 0 ? true : false;
+  const isValid = num => {return ((num % 10) === 0)};
+    return isValid(sumDigits);
 };
 //Test Functions
 console.log(validateCred(valid1)); //Returns true
